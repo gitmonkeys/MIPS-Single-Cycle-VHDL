@@ -28,7 +28,7 @@ component ALUPlus4 is
            );
 end component;
 
-component lab6IM is
+component instructionmemory is
     Port (PC : in STD_LOGIC_VECTOR (31 downto 0);
           ins : out STD_LOGIC_VECTOR (31 downto 0));
 end component;
@@ -131,7 +131,7 @@ MIPS_PCPlus4 : ALUPlus4 port map ( A => PC_OUT,
                                    PCPlus4 => PCPlus4
                                    );                         
                                    
-MIPS_IM : lab6IM port map ( PC => PC_OUT,
+MIPS_IM : instructionmemory port map ( PC => PC_OUT,
                             ins => ins
                             );
 
